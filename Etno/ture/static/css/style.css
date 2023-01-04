@@ -1,0 +1,477 @@
+* {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    
+    text-decoration: none;
+    padding: 0;
+    transition: all 0.2s ease 0s;
+}
+img{
+    width: 100px;
+    height: 100%;
+}
+body{
+    background: rgb(255, 255, 255);
+    margin: 0;
+}
+.menu-img{
+    display: none;
+
+    width: 39px;
+    height: 27px;
+    margin:auto 15px;
+    
+    background-image: url(../img/menu.png) ;
+    background-size: cover;
+}
+.nav{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+.nav-menu{
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    
+}
+
+.nav-urls-active{
+    display: none;
+    
+}
+
+.nav-content{
+    margin: 0 auto;
+    width: 1010px;
+    height: 80px;
+    
+    display: flex;
+
+}
+.nav-logo{
+    width: max-content;
+    flex: 1;
+    display: flex;
+}
+    .nav-logo-img{
+        display: block;
+        margin: auto 0;
+        width: 88px;
+        height: 60px;
+    }
+    .nav-logo-title{
+        width: 100px;
+        line-height: 80px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 24px;
+    }
+.nav-urls{
+    line-height: 80px;
+    width: max-content;
+    height: 80px;
+    display: flex;
+}
+.nav-urls a{
+    color: #fff;
+    width: max-content;
+    display: inline;
+    text-align: right;
+    margin: auto 26px;
+}
+
+.header{
+    padding-top: 0px;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.49)),
+        url(../img/header-img.jpg) top;
+    background-size: cover; 
+}
+.header-background{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.500);
+}
+.header-content{
+    margin: 150px auto;
+    display: flex;
+    width: 1010px;
+    height: 238px;
+    color: #fff;
+}
+.header-logo{
+    width: 250px;
+}
+    .header-logo-img{
+        width: 250px;
+        height: 171px;
+    }
+    .header-logo-title{
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+    }
+    .header-logo-info{
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+    }
+.header-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+}
+.theme-title{
+    text-align: center;
+    margin: 50px auto;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 32px;}
+.gallery{
+    width: max-content;
+    display: block;
+    position: relative;
+    margin: 0 auto 60px auto;}
+    .gallery-img-1{
+        position: absolute;
+        width: 360px;
+        height: 400px;
+        background-size: cover;
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        60% 20%;
+        background-size: cover;}
+    .gallery-img-2{
+        position: absolute;
+        left: 365px;
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        60% 20%;
+        background-size: cover;}
+    .gallery-img-3{
+        position: absolute;
+        left:620px;
+        width: 360px;
+        height: 400px;
+        
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        60% 20%;
+        background-size: cover;}
+    .gallery-img-4{
+        position: absolute;
+        top: 255px;
+        left: 365px;
+        width: 150px;
+        height: 145px;
+        
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        center;
+        background-size: cover;}
+    .gallery-img-5{
+        position: absolute;
+        top: 255px;
+        left: 520px;
+        width: 93px;
+        height: 65px;
+        
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        center;
+        background-size: cover;}
+    .gallery-img-6{
+        position: absolute;
+        top: 325px;
+        left: 520px;
+        width: 93px;
+        height: 75px;
+        background:
+        url(https://avatars.dzeninfra.ru/get-zen_doc/2807006/pub_6144d8059cd97b326b230565_6144d8068a833355e74d35d5/scale_1200)
+        center;
+        background-size: cover;}   
+.gallery-wrapper{
+    width: 980px;
+    height:400px;}
+.urls{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px auto;
+    text-align: center;}
+.urls a{
+    color: #705700;}
+.tours{
+    width: 1010px;
+    height: max-content;
+    margin: auto;
+}
+
+/* TOUR TEMPLATE */
+.tour{
+    margin:60px auto;
+    width: 832px;
+    height: max-content;
+    font-size: 20px;
+}
+    .title{
+        font-weight: 700;
+        font-size: 32px;
+    }
+.replace-button{
+    margin:30px auto;
+    display: block;
+    width: max-content;
+    padding: 10px 58px;
+    border: 1.7px solid;
+    color: #000000;
+}
+.tour-gallery{
+    width: 1010px;
+    height: max-content;
+    margin: auto;
+}
+    .tour-gallery-img{
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        margin: 15px;
+    }
+.travel{
+    display: flex;
+    width: 1010px;
+    margin: auto;
+    height: 300px;
+    border: 2px solid #A2A2A2;
+}
+.travel-programm{
+    width: 505px;
+}
+.travel-programm-title{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    
+    text-align: center;
+    
+    color: #000000;
+    
+}
+.travel-programm-list{
+    display: block;
+    margin-top: 60px;
+    margin-left: 70px;
+    font-weight: 300;
+    font-size: 20px;
+}
+.travel-programm-price{
+    margin-top: 20px;
+    margin-left: 70px;
+    font-weight: 700;
+    font-size: 32px;
+}
+.followe{
+    width: 505px;
+}
+.get-form{
+    width: max-content;
+    display:block;
+    margin:40px auto 0 auto;
+
+}
+    .fio , .phone , .quetion{
+        font-size: 18px;
+        
+        padding: 10px 20px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #A2A2A2;
+        text-align: center;
+        color:#686868 ;
+        outline: none;
+    }
+    .fio{
+        width: 300px;
+    }
+    .quetion{
+        width: 340px;
+        padding: 0 auto;
+        display: block;
+        margin:0 auto;
+        text-align: center;
+    }
+    .quetion option{
+        text-align: center;
+    }
+    .phone{
+        width: 300px;
+        display: block;
+        margin:0 auto;
+        padding: 0 auto;
+        text-align: center;
+    }
+
+/* END TOUR TEMPLATE */
+.tour-wrapper{
+    display: inline-block;
+    position: relative;
+    margin:2px auto;
+    width: 500px;
+    height: 200px;
+
+
+    box-shadow: 0px 0px 100px -30px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+    .tour-title{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        
+        font-family: 'Comfortaa';
+        
+        font-weight: 400;
+        font-size: 24px;
+        
+        color: #FFFFFF;
+    }
+    .tour-price{
+        position: absolute;
+        left:30px;
+        bottom: 30px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+    }
+    .tour-url{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        color: #fff;
+
+    }
+
+.interesting-places{
+    width: 1010px;
+    margin: 25px auto;
+}
+.ipw{
+    display: flex;
+    margin: 10px;
+}
+.ipw-img{
+    width: 500px;
+    height: 200px;
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+}
+.ipw-info{
+    width: 505px;
+}
+    .ipw-title{
+        width: 500px;
+        height: 29px;
+
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 29px;
+
+        color: #000000;
+        margin-left: 10px;
+    }
+    .ipw-desc{
+        margin-left: 10px;
+        margin-top: 3px;
+        width: 500px;
+        height: max-content;
+        left: 965px;
+        top: 2404px;
+
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 22px;
+
+        color: #000000;
+    }
+    .ipw-place{
+        margin-left: 10px;
+        width: 500px;
+        height: 22px;
+       
+
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+
+        color: #000000;
+    }
+    .hre{
+        margin:20px auto;
+        width: 781px;
+        border: 1px solid #705700;
+    }
+
+.footer{
+    width: 100%;
+    height: 383px;
+    background-color: #000000;
+    color: #fff;
+    
+}
+.footer-content{
+    display: flex;
+    width: 1010px;
+    
+    margin: auto;
+}
+    .footer-logo{
+
+        margin-top: 57px;
+
+        width: 250px;
+       
+        
+        color: #fff;
+        text-align: center;
+    }
+    .footer-logo-img{
+        width: 250px;
+        height: 171px;
+    }
+    .footer-logo-title{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 45px;
+    }
+.footer-contacts{
+    margin: auto 57px;
+}
+.footer-contacts-title{
+    margin-bottom: 50px;
+    color: #705700;
+
+    font-weight: 400;
+    font-size: 32px;
+}
+.footer-contacts-info{
+    font-weight: 300;
+}

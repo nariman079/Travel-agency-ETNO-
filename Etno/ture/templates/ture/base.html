@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/1024screen.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <img  class="nav-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                <span class="nav-logo-title">ЭТНО</span>
+            </div>
+            <div class="nav-urls">
+                <a href="{% url 'main-page' %}">Главная</a>
+                <a href="{% url 'gallery' %}">Галерея</a>
+                <a href=".">О сайте</a>
+            </div>
+            <div class="menu-img">
+                <div class="nav-menu"><div class="nav-urls-active">
+                    <a href="{% url 'main-page' %}">Главная</a>
+                    <a href="{% url 'gallery' %}">Галерея</a>
+                    <a href="">О сайте</a>
+                </div></div>
+            </div>
+        </div>
+    </div>
+    
+        {% block content %}{% endblock %}
+    
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img class="footer-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                <p class="footer-logo-title">ЭТНО</p>
+                <p class="footer-logo-info">Туристическое агенство</p>
+                <p class="footer-logo-info_2">© 2022 ООО “ЭТНО”</p>
+            </div>
+            <div class="footer-contacts">
+                <p class="footer-contacts-title">КОНТАКТЫ</p>
+                <p class="footer-contacts-info">
+                            Адрес: г. Дербент<br>
+                            Телефон: +7 (929) 874-64-11 <br>
+                            Email: kavkaz-travel05@inbox.ru <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

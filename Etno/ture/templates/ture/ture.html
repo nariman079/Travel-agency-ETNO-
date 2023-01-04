@@ -1,0 +1,73 @@
+{% extends 'ture/base.html' %}
+{% load static %}
+{% block title %}
+
+Путешествие в {{ tour.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="header" style="height:400px; background:url({{ tour.img.url }}) center; background-size: cover;">
+    
+    <div class="header-background"></div>
+</div>
+
+<div class="tour"><span class="title">|{{ tour.title }}|</span> {{ tour.description }}
+</div>
+<a class="replace-button" href="#rep">Оставить заявку</a>
+<p class="theme-title">Галерея</p>
+<div class="tour-gallery">
+    {% for img in tour_imgs %}
+    <div class="tour-gallery-img" style="background: url({{ img.img.url }}) center; background-size: cover;"></div>
+    {% endfor %}
+</div>
+<a class="replace-button" href="#travel" id="rep">Оставить заявку</a>
+<br>
+<p class="theme-title">Интересные места</p>
+<div class="interesting-places">
+   
+    
+    {% for i in tour_attractions %}
+        <div class="ipw">
+            <div class="ipw-img" style="background: url({{ i.img_1.url }}) center;background-size: cover;"></div>
+            <div class="ipw-info">
+                <p class="ipw-title">{{ i.title }}</p>
+                <p class="ipw-desc">{{ i.description }}</p>
+                
+            </div>
+
+        </div> 
+    {% endfor %}
+    
+</div>
+<div class="travel" id="travel">
+    <div class="travel-programm">
+        <p class="travel-programm-title">Программа поездки</p>
+         <ui class="travel-programm-list">
+            {% for ta in tour_attractions %}
+            <li>{{ ta.title }}</li>
+            {% endfor %}
+         </ui> 
+            </p>
+            <p class="travel-programm-price">{{ tour.price }}p</p>
+    </div>
+    <div class="followe">
+        <p class="travel-programm-title">
+            Организовать поездку
+        </p>
+        <form class="get-form" action="">
+            <input class="fio" type="text" placeholder="ФИО">
+            <input class="phone" type="tel" placeholder="+7(920)-000-23-43">
+            <select class="quetion" name="" id="">
+                <option value="1">Выбрать вопрос</option>
+            </select>
+            <a class="replace-button" href="">Оставить заявку</a>
+        </form>
+        
+    
+    </div>
+</div>
+<br>
+
+{% endblock %}
+    

@@ -1,0 +1,77 @@
+
+{% extends 'ture/base.html' %}
+{% load static %}
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+ <div class="header">
+
+        <div class="header-background">
+            <br>
+            <div class="header-content">
+
+                <div class="header-logo">
+                    <img class="header-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                    <p class="header-logo-title">ЭТНО</p>
+                    <p class="header-logo-info">Туристическое агнство</p>
+                </div>
+                <div class="header-text">
+                    Этно графический музей под открытым небом в городе Пльзень в
+                    Чехии – это целый комплекс, который представляет собой более чем 300-летнюю историю города,
+                    его культуру и быт. Здесь можно увидеть не только предметы быта, но и памятники истории, культуры и архитектуры.
+                    В музее под открытым небом можно найти все: от предметов быта до памятников архитектуры,
+                    от археологических находок до подлинных исторических документов. История возникновения музея под открытым небом
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="theme-title">Галерея</p>
+    <div class="gallery">
+
+        <div class="gallery-wrapper">
+            <div class="gallery-img-1"></div>
+            <div class="gallery-img-2"></div>
+            <div class="gallery-img-3"></div>
+            <div class="gallery-img-4"></div>
+            <div class="gallery-img-5"></div>
+            <div class="gallery-img-6"></div>
+        </div>
+        <p class="urls"><a href="{% url 'gallery' %}">Ещё картинки...</a></p>
+    </div>
+<p class="theme-title">Туры</p>
+    <div class="tours">
+        {% for t in tours %}
+        
+            <div class="tour-wrapper" style="background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url({{ t.img.url }}) center;background-size: cover; ">
+                <p class="tour-title">{{ t.title }}</p>
+                <span class="tour-price">{{ t.price }}p</span>
+                <a class="tour-url" href="{% url 'tour' t.id %}">Перейти</a>
+            </div>
+        {% endfor %}
+    </div>
+    <p class="theme-title">Интересные места</p>
+
+<div class="interesting-places">
+    {% for i in attractions %}
+        <a href="{% url 'tour' i.tour_id.id %}">
+            
+            <div class="ipw">
+                <div class="ipw-img" style="background: url({{ i.img_1.url }}) center;background-size: cover;"></div>
+                <div class="ipw-info">
+                    <p class="ipw-title">{{ i.title }}</p>
+                    <p class="ipw-desc">{{ i.description }}</p>
+                    <p class="ipw-place">Место нахождения: {{ i.tour_id.title }}</p>
+                </div>
+
+            </div>
+        </a>    
+    {% endfor %}
+    </div>
+
+
+
+{% endblock %}

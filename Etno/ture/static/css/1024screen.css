@@ -1,0 +1,337 @@
+@media (max-width:1024px) {
+   
+    .nav{
+        width: 100%;
+    }
+    .nav-content{
+        width: 480px;
+        
+    }
+    .nav-urls a{
+        margin: auto 10px;
+    }
+    .header{
+        width: 100%;
+    }
+    .header-background{
+        width: 100%;
+        height: 100%;
+    }
+    .header-content{
+        width:100%;
+        margin-top: auto;
+        display: block;
+    }
+    .header-logo{
+        margin:40px auto;
+    }
+    .header-text{
+        width: 80%;
+        margin: auto;
+    }
+    .gallery-wrapper{
+        width: 615px;
+
+    }
+    .gallery-img-3{
+        width: 0px;
+        margin: 0;
+        visibility: hidden;
+    }
+    .tours{
+        width: max-content;
+    }
+    .tour-wrapper{
+        display: block;
+        margin:5px auto;
+    }
+    .interesting-places{
+        width: max-content;
+        margin: 25px auto;
+    }
+    .ipw{
+        margin:20px auto;
+        display: block;
+        border: none;
+        border-bottom: 2px solid #705700 ;
+    }
+    .hre{
+        width: auto;
+    }
+    footer{
+        width: 100%;
+    }
+    .footer-content{
+        width: 100%;
+    }
+    .tour{
+        width: 90%;
+        margin: 5%;
+    }
+    .tour-gallery{
+        width: 680px;
+        margin: auto;
+
+    }
+    .travel{
+        display: block;
+        width: 540px;
+        height: 600px;
+    }
+    .travel-programm{
+        margin:  30px auto;
+        
+    }
+    .followe{
+        margin: 30px auto;
+    }
+}
+@media (max-width:680px) {
+    .gallery{
+        margin: auto;
+    }
+    .gallery-wrapper{
+       width: 250px;
+        
+    }
+    .gallery-img-1{
+        width: 0px;
+        margin: 0;
+        visibility: hidden;  
+    }
+    .gallery-img-2{
+        top: 0; 
+        left: 0;
+    }
+    .gallery-img-4{
+        top: 255px; 
+        left: 0;
+    }
+    .gallery-img-5{
+        top: 255px; 
+        left: 155px;
+    }
+    .gallery-img-5{
+        top: 255px; 
+        left: 155px;
+    }
+    .gallery-img-6{
+        top: 325px; 
+        left: 155px;
+    }
+
+    .tour-gallery{
+        width: 100%;
+        margin: auto;
+        padding: auto;
+
+    }
+    .tour-gallery-img{
+        width: 100%;
+        margin: 4px auto;
+        
+        
+    }
+}
+@media (max-width:540px) {
+    .header{
+        height: 800px;
+        padding-top: 0px;
+    }
+    .header-text{
+        font-size: 14px;
+    }
+
+    .nav-urls {
+        display: none;
+        
+    }
+    .nav-urls a{
+        margin: auto 3px;
+    }
+    .nav{
+        z-index: 6;
+        width: 100%;
+        height: 50px;
+        display: block;
+    }
+    .nav-content{
+        width: 100%;
+        height: 50px;
+        z-index: 5;
+        
+    }
+    .menu-img{
+        display: block;
+        
+        
+    }
+    .nav-logo{
+        width: 100px;
+        margin: auto;
+        display: flex;
+        z-index: 1;
+    }
+    .nav-logo-img{
+        width: 50px;
+        height: 35px;
+        
+    }
+    .nav-logo-title{
+        font-size: 16px;
+        line-height: 55px
+    }
+    .nav-urls-active{
+        position: relative;
+        z-index: -5;
+        width: 100%;
+        height: max-content;
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        
+    }
+    
+    
+    .nav-urls-active a{
+        position: relative;
+        z-index: -1;
+        margin:auto 4%;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+    }
+    
+    .menu-img:hover{
+        display: block;
+        width: 40px;
+        height: 40px;
+        
+        
+        background-image: url(../img/medu-deactive.png);
+        background-size: cover;
+        z-index: 5;
+    }
+    
+    .menu-img:hover .nav-menu{
+        top: 50px;
+        z-index: 3;
+        color: aliceblue;
+
+    }
+    .menu-img:hover .nav-urls-active a{
+        color: #fff;
+        z-index: 3;
+    }
+    
+    .tours{
+        width: 300px;
+
+    }
+    .tour-wrapper{
+        width: 300px;
+    }
+    .interesting-places{
+        width: 300px;
+        margin: 25px auto;
+    }
+    .ipw{
+        
+        margin:20px auto;
+        display: block;
+        border: none;
+        border-bottom: 2px solid #705700 ;
+    }
+    .ipw-img{
+        width: 300px;
+        height: 150px;
+    }
+    .ipw-info{
+        width: 300px;
+    }
+    .ipw-title{
+        width: auto;
+        font-size: 16px;
+    }
+    .ipw-desc{
+        width: 300px;
+        font-size: 16px;
+    }
+    .ipw-place{
+        width: auto;
+        font-size: 16px;
+    }
+    .footer{
+        width: 100%;
+        height: 700px;
+        font-size: 16px;
+    }
+    .footer-logo{
+        margin:30px auto;
+    }
+    .footer-content{
+        display: block;
+
+    }
+    .theme-title{
+        font-size: 24px;
+    }
+    .tour{
+        font-size: 17px;
+    }
+    .travel{
+        width: 300px;
+        margin: auto;
+    }
+    .travel-programm{
+        width: 300px;
+    }
+    .travel-programm-title{
+        margin-top: 10px;
+        
+        
+    }
+    .travel-programm-list{
+        display: block;
+        margin-top:10px;
+        margin-left: 30px;
+        
+        
+        font-size: 16px;
+    }
+    .travel-programm-price{
+        margin-left: 30px;
+        font-weight: 700;
+        font-size: 32px;
+    }
+    .followe{
+        width: 300px;
+    }
+    .get-form{
+        margin:40px auto 0 auto;
+    
+    }
+        .fio , .phone , .quetion{
+            
+            font-size: 14px;
+            
+        }
+        .fio{
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+        .quetion{
+            width: 240px;
+            
+            margin: auto;
+            text-align: center;
+            font-size: 14px;
+        }
+        .phone{
+            width: 200px;
+            display: block;
+            margin:0 auto;
+            padding: 0 auto;
+        }
+
+}

@@ -1,0 +1,41 @@
+{% extends 'ture/base.html' %}
+{% load static %}
+{% block title %}
+
+Путешествие в {{ tour.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="header" style="padding-top: 50px;">
+        
+        <div class="header-background">
+            <br>
+            <div class="header-content">
+                
+                <div class="header-logo">
+                    <img class="header-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                    <p class="header-logo-title">ЭТНО</p>
+                    <p class="header-logo-info">Туристическое агенство</p>
+                </div>
+                <div class="header-text">
+                    Этно графический музей под открытым небом в городе Пльзень в
+                    Чехии – это целый комплекс, который представляет собой более чем 300-летнюю историю города, 
+                    его культуру и быт. Здесь можно увидеть не только предметы быта, но и памятники истории, культуры и архитектуры.
+                    В музее под открытым небом можно найти все: от предметов быта до памятников архитектуры, 
+                    от археологических находок до подлинных исторических документов. История возникновения музея под открытым небом
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <p class="theme-title">Галерея</p>
+    <div class="tour-gallery">
+        {% for i in imgs %}
+        <a href="{% url 'tour' i.tour_id.id %}">
+            <div class="tour-gallery-img" style="background: url({{ i.img.url }}) center; background-size: cover;"></div>
+
+        </a>
+        {% endfor %}
+    
+    </div>
+{% endblock %}
