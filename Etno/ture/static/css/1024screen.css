@@ -267,6 +267,7 @@
     .ipw-img{
         width: 300px;
         height: 150px;
+        border-radius: 20px;
     }
     .ipw-info{
         width: 300px;
