@@ -274,15 +274,18 @@
     }
     .ipw-title{
         width: auto;
+        margin-left: 0;
         font-size: 16px;
     }
     .ipw-desc{
         width: 300px;
         font-size: 13px;
+        margin-left: 0;
     }
     .ipw-place{
         width: auto;
         font-size: 15px;
+        margin-left: 0;
         margin-bottom: 30px;
     }
     .footer{
