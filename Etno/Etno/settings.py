@@ -29,7 +29,8 @@ ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
-
+#Шрифт 
+#Выбрать вопрос убрать
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

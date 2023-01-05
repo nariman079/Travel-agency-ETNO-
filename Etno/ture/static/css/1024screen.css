@@ -53,7 +53,13 @@
         margin:20px auto;
         display: block;
         border: none;
-        border-bottom: 2px solid #705700 ;
+    }
+    .ipw-title{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .ipw-desc{
+        margin-bottom: 5px;
     }
     .hre{
         width: auto;
@@ -239,7 +245,7 @@
         margin:20px auto;
         display: block;
         border: none;
-        border-bottom: 2px solid #705700 ;
+        
     }
     .ipw-img{
         width: 300px;
@@ -254,11 +260,12 @@
     }
     .ipw-desc{
         width: 300px;
-        font-size: 16px;
+        font-size: 13px;
     }
     .ipw-place{
         width: auto;
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 30px;
     }
     .footer{
         width: 100%;

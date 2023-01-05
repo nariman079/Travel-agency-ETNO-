@@ -372,7 +372,7 @@ body{
 }
 .ipw{
     display: flex;
-    margin: 10px;
+    margin-bottom: 30px;
 }
 .ipw-img{
     width: 500px;
@@ -407,28 +407,22 @@ body{
         font-weight: 300;
         font-size: 15px;
         line-height: 22px;
-
+        
         color: #000000;
     }
     .ipw-place{
         margin-left: 10px;
         width: 500px;
         height: 22px;
-       
-
+        
         font-family: 'Comfortaa';
         font-style: normal;
         font-weight: 500;
         font-size: 20px;
         line-height: 22px;
-
         color: #000000;
     }
-    .hre{
-        margin:20px auto;
-        width: 781px;
-        border: 1px solid #705700;
-    }
+    
 
 .footer{
     width: 100%;
