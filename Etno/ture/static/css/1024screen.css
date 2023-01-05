@@ -235,6 +235,23 @@
     }
     .tour-wrapper{
         width: 300px;
+        height: 150px;
+        border-radius: 20px;
+    }
+    .tour-title{
+        top: 20px;
+        left: 20px;
+        font-size: 20px;
+    }
+    .tour-price{
+        bottom: 20px;
+        left: 20px;
+        font-size: 18px;
+    }
+    .tour-url{
+        right: 20px;
+        bottom: 20px;
+        font-size: 14px;
     }
     .interesting-places{
         width: 300px;
