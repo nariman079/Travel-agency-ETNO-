@@ -6,7 +6,7 @@ urlpatterns = [
     path('', main_page , name="main-page"),
     path('tour/<int:id>/',tour , name="tour" ),
     path('gallery/', gallery, name="gallery"),
-    path('about/', about)
+    path('about/', about, name="about")
 ] 
 
 
