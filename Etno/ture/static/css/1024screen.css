@@ -77,12 +77,13 @@
     .tour-gallery{
         width: 680px;
         margin: auto;
-
+        
     }
     .travel{
         display: block;
         width: 540px;
-        height: 600px;
+        min-height: 600px;
+        max-height: max-content;
     }
     .travel-programm{
         margin:  30px auto;
@@ -138,6 +139,9 @@
         margin: 4px auto;
         
         
+    }
+    .travel{
+        height: max-content;
     }
 }
 @media (max-width:540px) {
