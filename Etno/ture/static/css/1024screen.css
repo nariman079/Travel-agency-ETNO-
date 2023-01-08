@@ -312,6 +312,7 @@
     }
     .travel{
         width: 300px;
+        height: max-content;
         margin: auto;
     }
     .travel-programm{
