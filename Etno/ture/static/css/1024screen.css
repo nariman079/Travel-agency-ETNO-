@@ -82,8 +82,7 @@
     .travel{
         display: block;
         width: 540px;
-        min-height: 600px;
-        max-height: max-content;
+        height: max-content;
     }
     .travel-programm{
         margin:  30px auto;

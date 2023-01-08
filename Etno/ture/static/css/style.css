@@ -255,7 +255,7 @@ body{
     display: flex;
     width: 1010px;
     margin: auto;
-    height: 300px;
+    height: max-content;
     border: 2px solid #A2A2A2;
 }
 .travel-programm{
