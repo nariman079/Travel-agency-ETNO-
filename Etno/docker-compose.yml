@@ -6,6 +6,21 @@ services:
     container_name: TravelEtno
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/usr/src/app
+      - .:/project
+      - static:/project/static
+    expose:
+      - 8000
+  
+  nginx:
+    image: nginx
+    depends_on:
+      - django-project
     ports:
-      - 8000:8000
+      - 80:80
+    volumes:
+      - static:/var/www/html/static
+      - .nginx-conf.d:/etc/nginx/conf.d
+
+volumes:
+  static:
+

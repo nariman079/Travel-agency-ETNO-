@@ -1,6 +1,8 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+WORKDIR /project
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
 COPY requirements.txt .
 
