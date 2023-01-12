@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ture'
+    'ture',
+    'get_send'
 ]
 
 MIDDLEWARE = [

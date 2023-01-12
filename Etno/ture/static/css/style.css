@@ -332,7 +332,11 @@ body{
         padding: 0 auto;
         text-align: center;
     }
-
+.main-info-button{
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
 /* END TOUR TEMPLATE */
 .tour-wrapper{
     display: inline-block;

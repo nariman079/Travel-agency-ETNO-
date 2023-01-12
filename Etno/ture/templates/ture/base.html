@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="{% static '/css/1024screen.css' %}">
     <link rel="icon" href="{% static '/img/icon.png' %}" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
        <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
     
         {% block content %}{% endblock %}
     
-    <div class="footer">
+    <div class="footer" id="footer">
         <div class="footer-content">
             <div class="footer-logo">
                 <img class="footer-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
@@ -50,7 +50,7 @@
                 <p class="footer-contacts-title">КОНТАКТЫ</p>
                 <p class="footer-contacts-info">
                             Адрес: г. Дербент<br>
-                            Телефон: +7 (929) 874-64-11 <br>
+                            Телефон:<span itemprop="telephone">+7 (000)</span>  <br>
                             Email: kavkaz-travel05@inbox.ru <br>
                 </p>
             </div>

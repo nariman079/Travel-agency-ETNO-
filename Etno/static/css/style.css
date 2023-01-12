@@ -31,7 +31,11 @@ body{
     height: 80px;
     background-color: black;
 }
-
+.main-info-button{
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
 .nav-menu{
     z-index: -1;
     position: fixed;

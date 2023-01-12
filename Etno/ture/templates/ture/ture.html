@@ -55,13 +55,14 @@
         <p class="travel-programm-title">
             Организовать поездку
         </p>
-        <form class="get-form" action="">
-            <input class="fio" type="text" placeholder="ФИО">
-            <input class="phone" type="tel" placeholder="+7(920)-000-23-43">
-            <select class="quetion" name="" id="">
-                <option value="1">Выбрать вопрос</option>
-            </select>
-            <a class="replace-button" href="">Оставить заявку</a>
+        <form class="get-form" method="post">
+            {% csrf_token %}
+            {% for f in form %}
+                {{ f }}
+            {% endfor %}
+            
+            <button class="replace-button" style="background: none; border: 2px solid;" >Оставить заявку</button>
+            <p style="text-align: center;">Мы с вами свяжемся</p>
         </form>
         
     

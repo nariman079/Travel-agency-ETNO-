@@ -16,7 +16,7 @@
                 <div class="header-logo">
                     <img class="header-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
                     <p class="header-logo-title">ЭТНО</p>
-                    <p class="header-logo-info">Туристическое агнство</p>
+                    <p class="header-logo-info">Туристическое агeнство</p>
                 </div>
                 <div class="header-text">
                     {{ about_info }}
@@ -24,6 +24,11 @@
             </div>
         </div>
 
+    </div>
+    <div class="main-info-button">
+        <a class="replace-button" href="#tours" id="rep">Выбрать тур</a>
+        <a class="replace-button" href="#footer" id="rep" style="background-color: black; color: aliceblue;">Контакты</a>
+    
     </div>
     <p class="theme-title">Галерея</p>
     <div class="gallery">
@@ -38,8 +43,8 @@
         </div>
         <p class="urls"><a href="{% url 'gallery' %}">Ещё картинки...</a></p>
     </div>
-<p class="theme-title">Туры</p>
-    <div class="tours">
+<p class="theme-title" id="tours" >Туры</p>
+    <div class="tours" >
         {% for t in tours %}
         
             <div class="tour-wrapper" style="background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url({{ t.img.url }}) center;background-size: cover; ">
