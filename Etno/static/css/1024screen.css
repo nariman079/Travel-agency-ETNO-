@@ -374,5 +374,7 @@
 @media (max-width:400px) {
     .main-info-button{
         display: block;
+        width: 100%;
+        margin: auto;
     }
 }

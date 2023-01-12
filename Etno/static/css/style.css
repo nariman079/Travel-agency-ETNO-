@@ -84,6 +84,11 @@ body{
     height: 80px;
     display: flex;
 }
+.main-info-button{
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
 .nav-urls a{
     color: #fff;
     width: max-content;
