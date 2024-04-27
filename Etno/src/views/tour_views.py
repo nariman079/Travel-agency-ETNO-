@@ -32,13 +32,6 @@ def tour(request, id):
     context['tour_imgs'] = tour_models.Image.objects.filter(tour_id_id=id)[:6]
     context['tour_attractions'] = tour_models.Attraction.objects.filter(tour_id_id=id)
     context['form'] = forms.GetEmailForm()
-    if request.method == "POST":
-        form = forms.GetEmailForm(request.POST)
-        if form.is_valid():
-            tel = form.cleaned_data['tel']
-            fio = form.cleaned_data['fio']
-
-            return redirect('tour', id)
 
     return render(request, 'tour/tour.html', context=context)
 
