@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from src.models import tour_models,application_models
+from django.shortcuts import render
+from src.models import tour_models
 from src import forms
 
 
