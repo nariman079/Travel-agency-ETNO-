@@ -1,0 +1,78 @@
+
+{% extends 'tour/base.html' %}
+{% load static %}
+{% block title %}
+Главная страница | Туристический сайт ЭТНО
+{% endblock %}
+
+{% block content %}
+
+ <div class="header">
+
+        <div class="header-background">
+            <br>
+            <div class="header-content">
+
+                <div class="header-logo">
+                    <img class="header-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                    <p class="header-logo-title">ЭТНО</p>
+                    <p class="header-logo-info">Туристическое агeнство</p>
+                </div>
+                <div class="header-text">
+                    {{ about_info }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="main-info-button">
+        <a class="replace-button" href="#tours" id="rep">Выбрать тур</a>
+        <a class="replace-button" href="#footer" id="rep" style="background-color: black; color: aliceblue;">Контакты</a>
+    
+    </div>
+    <p class="theme-title">Галерея</p>
+    <div class="gallery">
+
+        <div class="gallery-wrapper">
+            <div class="gallery-img-1"></div>
+            <div class="gallery-img-2"></div>
+            <div class="gallery-img-3"></div>
+            <div class="gallery-img-4"></div>
+            <div class="gallery-img-5"></div>
+            <div class="gallery-img-6"></div>
+        </div>
+        <p class="urls"><a href="{% url 'gallery' %}">Ещё картинки...</a></p>
+    </div>
+<p class="theme-title" id="tours" >Туры</p>
+    <div class="tours" >
+        {% for t in tours %}
+        
+            <div class="tour-wrapper" style="background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url({{ t.img.url }}) center;background-size: cover; ">
+                <p class="tour-title">{{ t.title }}</p>
+                <span class="tour-price">{{ t.price }}p</span>
+                <a class="tour-url" href="{% url 'tour' t.id %}">Перейти</a>
+            </div>
+        {% endfor %}
+    </div>
+    <p class="theme-title">Интересные места</p>
+
+<div class="interesting-places">
+    {% for i in attractions %}
+        <a href="{% url 'tour' i.tour_id.id %}">
+            
+            <div class="ipw">
+                <div class="ipw-img" style="background: url({{ i.img_1.url }}) center;background-size: cover;"></div>
+                <div class="ipw-info">
+                    <p class="ipw-title">{{ i.title }}</p>
+                    <p class="ipw-desc">{{ i.description }}</p>
+                    <p class="ipw-place">Место нахождения: {{ i.tour_id.title }}</p>
+                </div>
+
+            </div>
+        </a>    
+    {% endfor %}
+    </div>
+
+
+
+{% endblock %}
