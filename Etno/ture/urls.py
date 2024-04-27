@@ -12,6 +12,3 @@ urlpatterns = [
 ] 
 
 
-test_get_attr(upload='img/', model=Tour, attr='img')
-test_get_attr(upload='img/', model=Attraction, attr='img_1')
-test_get_attr(upload='img/', model=Image, attr='img')

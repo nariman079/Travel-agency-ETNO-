@@ -16,9 +16,10 @@ services:
     depends_on:
       - django-project
     ports:
-      - 80:80
+      - "80:80"
     volumes:
       - static:/var/www/html/static
+      - media:/var/www/html/media
       - .nginx-conf.d:/etc/nginx/conf.d
 
 volumes:
