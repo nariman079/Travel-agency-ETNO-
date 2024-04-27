@@ -1,0 +1,35 @@
+{% extends 'tour/base.html' %}
+{% load static %}
+{% block title %}
+Галерея | Туристический сайт ЭТНО
+{% endblock %}
+
+{% block content %}
+    <div class="header" style="padding-top: 50px;">
+        
+        <div class="header-background">
+            <br>
+            <div class="header-content">
+                
+                <div class="header-logo">
+                    <img class="header-logo-img" src="{% static '/img/header-logo.png' %}" alt="">
+                    <p class="header-logo-title">ЭТНО</p>
+                    <p class="header-logo-info">Туристическое агенство</p>
+                </div>
+                <div class="header-text">
+                    {{ about_info }}   </div>
+            </div>
+        </div>
+       
+    </div>
+    <p class="theme-title">Галерея</p>
+    <div class="tour-gallery">
+        {% for i in imgs %}
+        <a href="{% url 'tour' i.tour_id.id %}">
+            <div class="tour-gallery-img" style="background: url({{ i.img.url }}) center; background-size: cover;"></div>
+
+        </a>
+        {% endfor %}
+    
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'tour/base.html' %}
+{% load static %}
+{% block title %}
+О нас | Туристический сайт ЭТНО
+{% endblock %}
+{% block content %}
+<div class="header" style="background: none;">
+    <div class="header-background" style="background: none;">
+        <br>
+        <div class="header-content">
+
+            <div class="header-logo">
+                <img class="header-logo-img" src="{% static '/img/about-logo.png' %}" alt="">
+                <p class="header-logo-title" style="color: black;">ЭТНО</p>
+                <p class="header-logo-info" style="color: black;">Туристическое агнство</p>
+            </div>
+            <div class="header-text" style="color: black;">
+                {{ about_info }}
+            </div>
+        </div>
+    </div>
+    
+</div>
+<p class="theme-title">Достопримечательности</p>
+<br>
+<p class="theme-title" style="font-size: 128px; display: block; margin-top: 40px;">{{ attractions }}</p>
+<p class="theme-title" style="font-size: 15px;">С нами вы можете посетить {{ attractions }} впечатляющих мест </p>
+<br><br><br>
+<p class="theme-title">Туры</p>
+<br>
+<p class="theme-title" style="font-size: 128px; display: block; margin-top: 40px;">{{ tours }}</p>
+<p class="theme-title" style="font-size: 15px; margin:0;" >У нас есть {{ tours }} открытых туров </p>
+<br><br><br>
+<p class="theme-title" style="font-size: 15px;">Контактная информация ниже</p>
+<br><br><br>
+{% endblock %}
