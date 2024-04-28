@@ -17,7 +17,7 @@ class TourAdminPanel(admin.ModelAdmin):
 
     def image(self, obj: tour_models.Tour) -> str:
         return format_html(
-            f"""<img width="150" src="{obj.img.url}rl">"""
+            f"""<img width="150" src="{obj.img.url}">"""
         ) or None
 
 
@@ -32,7 +32,7 @@ class AttractionAdminPanel(admin.ModelAdmin):
 
     def image(self, obj: tour_models.Attraction) -> str:
         return format_html(
-            f"""<img width="150" src="{obj.img_1.url}rl">"""
+            f"""<img width="150" src="{obj.img_1.url}">"""
         )
 
 
