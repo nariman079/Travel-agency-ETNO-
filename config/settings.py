@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECRET_KEY = 'django-insecure-(2enk-*g7c8hv#b6*fd7n00q&3(rour871ikp!jk8%#o^wd*+v'
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -113,3 +112,6 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
