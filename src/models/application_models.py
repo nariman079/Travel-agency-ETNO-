@@ -4,7 +4,8 @@ from django.db import models
 class ApplicationTour(models.Model):
     class Meta:
         db_table = 'application_tour'
-        verbose_name = "Заявки на тур"
+        verbose_name = "Заявка на тур"
+        verbose_name_plural = "Заявки на туры"
 
     full_name = models.CharField(max_length=60, verbose_name="Полное имя")
     phone_number = models.CharField(max_length=60, verbose_name="Номер телефона")
