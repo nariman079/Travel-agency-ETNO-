@@ -15,7 +15,6 @@ urlpatterns = [
         application_admin.application_collection_admin.urls,
         name="application-collect"
     ),
-
     path('', include('src.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
