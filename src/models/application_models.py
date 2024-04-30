@@ -1,7 +1,5 @@
 from django.db import models
 
-from src.services.application_services import SendMessageAboutApplication
-
 
 class ApplicationTour(models.Model):
     """
@@ -18,10 +16,5 @@ class ApplicationTour(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.pk:
-            body = dict(
-                full_name=self.full_name,
-                phone_number=self.phone_number,
-                tour_title=self.tour.title
-            )
-            SendMessageAboutApplication(body).execute()
+            ...
         return super().save(*args, **kwargs)
