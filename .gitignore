@@ -16,4 +16,5 @@ __pycache__/
 dist
 src
 .coverage
-*.zip
+*.zip__pycache__
+*.pyc
