@@ -1,5 +1,5 @@
 from django.db import models
-
+from uuid import uuid4
 
 class Tour(models.Model):
     img = models.ImageField(upload_to="img/")
@@ -36,3 +36,21 @@ class ProgramTrip(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Report(models.Model):
+    """Модель Отчетов"""
+
+    class Meta:
+        verbose_name = 'Отчет'
+        verbose_name_plural = 'Отчеты'
+
+    class ReportType(models.TextChoices):
+        day = 'day', "За день"
+        week = 'week', "За неделю"
+        month = 'month', "За месяц"
+    
+    uid = models.CharField(max_length=90, default=uuid4, editable=False)
+    report_type = models.CharField("Отчет за", max_length=40, choices=ReportType.choices)
+    file = models.FileField("Файл",upload_to='reports/', editable=False, null=True)
+    url = models.URLField(null=True)

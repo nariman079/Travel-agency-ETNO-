@@ -17,7 +17,7 @@ class TourE2ETests(unittest.TestCase):
 
     def test_template_1_buttons(self):
         self.driver.get("http://localhost:8080/")
-        self.assertIn('Главная страницы', self.driver.title)
+        self.assertIn('Authorization', self.driver.title)
 
 
 if __name__ == '__main__':
