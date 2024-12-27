@@ -1,4 +1,5 @@
 venv
+.venv/
 .gitignore
 **/__pycache__/
 
@@ -15,4 +16,5 @@ __pycache__/
 dist
 src
 .coverage
-*.zip
+*.zip__pycache__
+*.pyc

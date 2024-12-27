@@ -1,7 +1,8 @@
+from django.http import Http404, HttpResponse
 from django.shortcuts import render
-from src.models import tour_models
-from src import forms
 
+from src.models import tour_models, application_models
+from src import forms
 
 
 def main_info():
@@ -28,10 +29,24 @@ def main_page(request):
 
 def tour(request, id):
     context = dict()
-    context['tour'] = tour_models.Tour.objects.get(pk=id)
-    context['tour_imgs'] = tour_models.Image.objects.filter(tour_id_id=id)[:6]
-    context['tour_attractions'] = tour_models.Attraction.objects.filter(tour_id_id=id)
+    try:
+        tour_obj = tour_models.Tour.objects.get(pk=id)
+    except:
+        return HttpResponse(
+            status=404,
+            content="<h1>Такого тура нет в базе данных</h1>",
+        )
+    context['tour'] = tour_obj
+    context['tour_imgs'] = tour_obj.image_set.all()
+    context['tour_attractions'] = tour_obj.attraction_set.all()
     context['form'] = forms.GetEmailForm()
+
+    if request.method == "POST":
+        application_models.ApplicationTour.objects.create(
+            full_name=request.POST.get('fio'),
+            phone_number=request.POST.get('tel'),
+            tour_id=id
+        )
 
     return render(request, 'tour/tour.html', context=context)
 

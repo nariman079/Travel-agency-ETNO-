@@ -1,4 +1,4 @@
-from django.forms import *
+from django.forms import Form, CharField, TextInput
 
 
 class GetEmailForm(Form):
