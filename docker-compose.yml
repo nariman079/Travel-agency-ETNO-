@@ -3,21 +3,7 @@ version: '3.9'
 
 services:
 
-  # Postgresql
-  db:
-    image: postgres:14-alpine
-    container_name: db_app
-    restart: unless-stopped
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
-    ports:
-      - "5438:5432"
-    networks:
-      - net
-
-  backend:
+  backend_app:
     build: .
     restart: unless-stopped
     container_name: backend_app
@@ -36,28 +22,19 @@ services:
     networks:
       - net
 
-  # Celery
-#  celery:
-#    build: .
-#    command: poetry run celery -A app worker -l info
-#    restart: unless-stopped
-#    links:
-#      - app
-#    depends_on:
-#      - app
-#    networks:
-#      - net
-  # Nginx
   nginx:
     image: nginx
     restart: unless-stopped
     ports:
       - "80:80"
     depends_on:
-      - backend
+      - backend_app
     networks:
       - net
 
+volumes:
+  static_volume:
+  media_volume:
 
 networks:
   net:

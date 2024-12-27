@@ -37,3 +37,4 @@ class AttractionAdminPanel(admin.ModelAdmin):
 
 
 content_management_admin.register(tour_models.Attraction, AttractionAdminPanel)
+content_management_admin.register(tour_models.Image)
